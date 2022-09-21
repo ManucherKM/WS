@@ -4,6 +4,11 @@
 
 
 
+@layer components {
+    .container {
+        max-width: 1300px
+    }
+}
 
 
 body {

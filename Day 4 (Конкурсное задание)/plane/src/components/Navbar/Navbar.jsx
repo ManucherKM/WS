@@ -24,10 +24,10 @@ const Navbar = () => {
                 </div>
                 <ul className="flex gap-5 md:hidden">
                     <li>
-                        <Link to="/login" className="px-2 py-2 text-white rounded-lg border outline-none">Вход</Link>
+                        <Link to="/login" className="px-4 py-2 text-white rounded-lg border outline-none">Вход</Link>
                     </li>
                     <li>
-                        <Link to="/register" className="px-2 py-2 bg-white rounded-lg outline-none">Регистрация</Link>
+                        <Link to="/register" className="px-4 py-2 bg-white rounded-lg outline-none">Регистрация</Link>
                     </li>
                 </ul>
 
