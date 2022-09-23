@@ -3,13 +3,16 @@ import Button from '../../../components/UI/Button'
 
 
 const Header = () => {
+
+    const clickBtn = () => {console.log(123);}
+
     return (
         <div className="container flex justify-between mt-24 items-center md:flex-col md:mt-12">
             <div className="w-[50%] md:w-full">
                 <h1 className="text-5xl mb-5">Комфорт</h1>
                 <p className="text-base mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ipsum perspiciatis consequatur eveniet accusantium dolore quam asperiores voluptatibus tempore! Nam officiis doloribus distinctio ex quis aut quia consectetur sit error veniam maxime enim, dolorem at officia magnam consequuntur nihil, impedit porro praesentium nobis. Debitis incidunt ratione nulla sunt voluptates numquam!</p>
                 <div>
-                    <Button textButton={"Забронировать"} />
+                    <Button click={clickBtn} textButton={"Забронировать"} />
                 </div>
             </div>
             <div>

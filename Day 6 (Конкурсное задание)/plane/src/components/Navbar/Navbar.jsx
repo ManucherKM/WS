@@ -40,10 +40,10 @@ const Navbar = () => {
             </div>
             <div className={menuMobile}>
                 <ul className="flex flex-col">
-                    <li className="flex flex-col text-center mb-2">
+                    <li onClick={() => { setMenuModileVis(!menuMobileVis); setBurgerClick(!burgerClick) }} className="flex flex-col text-center mb-2">
                         <Link to="/login" className="px-2 py-2 text-white rounded-lg border">Войти</Link>
                     </li>
-                    <li className="flex flex-col text-center">
+                    <li onClick={() => { setMenuModileVis(!menuMobileVis); setBurgerClick(!burgerClick) }} className="flex flex-col text-center">
                         <Link to="/register" className="px-2 py-2 bg-white rounded-lg">Регистрация</Link>
                     </li>
                 </ul>

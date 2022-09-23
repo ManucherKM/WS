@@ -9,7 +9,7 @@ const Input = (props) => {
     }
 
     return (
-        <input required={props.Required} placeholder={props.bgText} className={`outline-none w-full py-2 px-4 ${props.dopStyles}`} value={newVal} onChange={upVal} type="text" />
+        <input required={props.Required} placeholder={props.bgText} className={`outline-none w-full py-2 px-4 border-gray-400 ${props.dopStyles}`} value={newVal} onChange={upVal} type="text" />
     )
 }
 

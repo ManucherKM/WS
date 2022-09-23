@@ -8,7 +8,6 @@ import Search from './pages/Search/Search'
 import Register from './pages/Register/Register'
 import Navbar from './components/Navbar/Navbar'
 
-
 const App = () => {
   return (
     <>
