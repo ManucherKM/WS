@@ -1,12 +1,26 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
 import plane from "../../assets/img/plane.svg"
 import Place from './Place/Place'
 import Button from "../../components/UI/Button"
 import Modal from '../../components/UI/Modal'
 import Footer from '../../components/Footer/Footer'
+import axios from "../../axios"
+import { useEffect } from 'react'
+
 
 const Reservation = () => {
-  const user = useSelector()
+  const { id } = useParams();
+
+  const fetchPlane = axios.get(`/reservation/${id}`);
+
+  let infoPlane = null;
+
+  fetchPlane.then(res => { infoPlane = res.data.flight; console.log(infoPlane) })
+
+
+  const user = useSelector(state => state.user)
 
 
   const result = [{
@@ -352,18 +366,21 @@ const Reservation = () => {
 
   const textRed = isPlace ? "font-semibold ml-auto" : "font-semibold text-red-600 ml-auto"
 
-  const clickBtn = () => {
+  const clickBtn = async () => {
     if (!isPlace) {
       setIsModalError(true)
       return;
     }
-
     const obj = {
-      id: 123,
+      userId: user._id,
+      planeId: id,
       place: place
     }
 
-    // axios.post("URL",obj)
+    // const reservationPlace = await axios.post("/reservation", obj);
+
+
+    // console.log(reservationPlace);
 
     setIsModalSuccess(true)
   }

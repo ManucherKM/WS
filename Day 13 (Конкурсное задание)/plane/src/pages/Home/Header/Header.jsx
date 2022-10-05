@@ -1,9 +1,11 @@
 import React from 'react'
-import MyLink from '../../../components/UI/MyLink'
+import MyLink from '../../../components/UI/MyLink';
 
 const Header = () => {
 
-    const clickBtn = () => { console.log(123); }
+   
+
+    const clickLink = () => { }
 
     return (
         <div className="container flex justify-between mt-24 items-center md:flex-col md:mt-12">

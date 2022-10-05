@@ -22,6 +22,7 @@ app.post("/admin/addflight", addFlightValidation, FlightController.addFlight);
 app.get("/reservation/:id", FlightController.getFlight);
 app.post("/reservation", updateFlightValidation, FlightController.reservation);
 app.get("/profile/:id", UserController.profile);
+app.get("/search", FlightController.getFlights);
 
 app.listen(PORT, (e) => {
     if (e) {

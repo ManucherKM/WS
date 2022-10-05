@@ -38,6 +38,10 @@ const FlightModel = mongoose.Schema({
         type: Array,
         default: [],
         required: true
+    },
+    description: {
+        type: String,
+        default: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi architecto similique ipsam accusamus neque voluptatum vitae unde eos excepturi, dolorem, nulla blanditiis mollitia totam provident sunt aliquid eius amet dolorum?"
     }
 }, {
     timestamps: true

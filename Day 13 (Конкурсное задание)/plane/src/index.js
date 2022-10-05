@@ -9,7 +9,8 @@ import { Provider } from 'react-redux';
 
 const defaultState = {
   register: false,
-  user: null
+  user: null,
+  flyghts: null
 };
 
 const reducer = (state = defaultState, action) => {
@@ -18,6 +19,8 @@ const reducer = (state = defaultState, action) => {
       return { ...state, register: true, user: action.newUser }
     case "exit":
       return { ...state, register: false, user: null }
+    case "getFlights":
+      return { ...state, flyghts: action.flyghts }
     default:
       return state
   }

@@ -3,9 +3,7 @@ import { Link } from "react-router-dom"
 
 const MyLink = (props) => {
 
-    const clickLink = () => {
-        // console.log(123);
-    }
+    const clickLink = () => { }
 
     return (
         <>

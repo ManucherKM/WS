@@ -8,7 +8,9 @@ const Profile = () => {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch()
 
+  const isUserFlyghts = user.flying;
 
+console.log(isUserFlyghts);
 
   const exitUser = () => {
     dispatch({ type: "exit" })
@@ -24,11 +26,14 @@ const Profile = () => {
             <p className='text-xl flex md:text-lg'>Имя: <span className='font-semibold ml-auto'>{user.name}</span></p>
             <p className='text-xl flex mt-4 md:text-lg'>Email: <span className='font-semibold ml-auto'>{user.email}</span></p>
             <p className='text-xl flex mt-4 md:text-lg'>Возраст: <span className='font-semibold ml-auto'>{user.age}</span></p>
-            <p className='text-xl flex mt-4 md:text-lg'>Дата регистрации: <span className='font-semibold ml-auto'>{user.createdAt}</span></p>
+            <p className='text-xl flex mt-4 md:text-lg'>Дата регистрации: <span className='font-semibold ml-auto'>{user.createdAt.slice(0, 10)}</span></p>
           </div>
           <h2 className='font-medium text-2xl mt-28'>Мои полеты</h2>
           <div className='mt-10 mb-20 flex flex-wrap gap-10 justify-center'>
-            {user.flying.length !== 0 && user.flying.map((card) => <Card key={card.id} info={card} />)}
+            {isUserFlyghts.length !== 0 && user.flying.map((card) => <Card key={card.id} info={card} />)}
+            {isUserFlyghts.length === 0 &&
+              <h1 className='text-xl text-gray-400'>Похоже что вы еще не бронировали полеты</h1>
+            }
           </div>
         </div>
       </div>

@@ -128,3 +128,21 @@ export async function getFlight(req, res) {
         })
     }
 }
+
+export async function getFlights(req, res) {
+    try {
+
+        const flights = await FlightModel.find()
+
+        res.status(200).json({
+            message: "Список полетов успешно отправлен",
+            flight: flights
+        })
+
+    } catch (e) {
+        console.log(e);
+        res.status(500).json({
+            message: "Не удалось отправить список полетов"
+        })
+    }
+}
